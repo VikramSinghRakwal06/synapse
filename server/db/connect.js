@@ -1,9 +1,12 @@
 const mongoose = require('mongoose');
-const 
+
 const dbConnect =async ()=>{
     try {
-        await mongoose.connect()
+        const conn = await mongoose.connect(process.env.MONDO_DB_URI);
+        console.log(`Mongoose connected: ${conn.connection.host}`)
     } catch (error) {
-        
+        console.log(`Mongoose Connection failed:${error.message}`);
+        process.exit(1);
     }
 }
+module.exports = dbConnect;
