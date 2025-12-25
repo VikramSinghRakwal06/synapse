@@ -9,4 +9,4 @@ const messageSchema = new mongoose.Schema({
 
 messageSchema.index({roomId:1,timeStamp:-1});
 
-module.exports= mongoose.Model('Message',messageSchema);
+module.exports= mongoose.model('Message',messageSchema);
