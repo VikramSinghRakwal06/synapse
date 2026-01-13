@@ -8,14 +8,14 @@ const userSchema = new mongoose.Schema({
     avatar:{type:String, default:""}
 },{timestamps:true});
 
-userSchema.pre('save',async function (next){
+userSchema.pre('save',async function (){
     if(!this.isModified('password'))return next();
-    this.password=await bcrypt.hast(this.password, 10);
-    next();
+    this.password=await bcrypt.hash(this.password, 10);
+ 
 })
 
 userSchema.methods.matchPassword = async function(enteredPassword){
-    return await bcrypt.compare(this.password,enteredPassword);
+    return await bcrypt.compare(enteredPassword,this.password);
 }
 
 module.exports = mongoose.model('User', userSchema);

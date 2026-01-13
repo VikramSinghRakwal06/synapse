@@ -27,7 +27,7 @@ module.exports = (io)=>{
         }   
     })
     socket.on('typing', (data)=>{
-        socket.to(data.roomId).emit('display_typing',data.username);
+        socket.to(data.roomId).emit('display_typing',data.userName);
     })
 
     socket.on("callUser",(data)=>{
