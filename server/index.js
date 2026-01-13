@@ -44,7 +44,7 @@ const io = new Server(server,{
 
 socketManager(io);
 
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3004;
 
 server.listen(PORT, ()=>{
     console.log(`Synapse running on ${PORT}`);
