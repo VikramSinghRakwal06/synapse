@@ -2,19 +2,21 @@
 
 **A High-Performance Real-Time Communication Platform**
 
-Synapse is a modern, full-stack real-time chat application designed for speed and seamless connectivity. Built with the MERN stack and Socket.io, it features instant messaging, secure authentication, and dynamic room management.
+Synapse is a modern, full-stack real-time collaboration application designed for speed and seamless connectivity. Built with the MERN stack and Socket.io, it features instant messaging, high-quality video conferencing, secure authentication, and dynamic room management.
 
 🚀 **Live Demo:** [https://synapse-phi-one.vercel.app](https://synapse-phi-one.vercel.app)
 
+---
 
 ## ✨ Features
 
-* **Real-time Messaging:** Instant communication using `Socket.io` websockets.
+* **Real-time Messaging:** Instant text communication using `Socket.io` websockets.
+* **Video Conferencing:** High-quality real-time video and audio calling powered by WebRTC.
 * **Secure Authentication:** User registration and login protected by JWT (JSON Web Tokens).
-* **Room-based Chat:** Create and join specific chat rooms for organized conversations.
+* **Room-based Chat:** Create and join specific rooms for group chats or private calls.
 * **Responsive UI:** Modern, clean interface built with React, Vite, and Tailwind CSS.
 * **Secure Backend:** Express server with Helmet security headers and CORS configuration.
-* **Persistent Data:** All users and messages are stored securely in MongoDB.
+* **Persistent Data:** All users and chat history are stored securely in MongoDB.
 
 ---
 
@@ -25,6 +27,7 @@ Synapse is a modern, full-stack real-time chat application designed for speed an
 * Tailwind CSS
 * Zustand (State Management)
 * Socket.io Client
+* WebRTC (Video Streaming)
 
 **Backend:**
 * Node.js & Express.js
@@ -44,4 +47,5 @@ Follow these steps to run Synapse on your local machine.
 
 ### 1. Clone the Repository
 ```bash
-git clone [https://github.com/your-username/synapse.git](https://github.com/your-username/synapse.git)
+git clone [https://github.com/VikramSinghRakwal06/synapse.git](https://github.com/VikramSinghRakwal06/synapse.git)
+cd synapse
