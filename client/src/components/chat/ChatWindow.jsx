@@ -51,7 +51,7 @@ const ChatWindow = ({ socket }) => {
 
     const msgData = {
         roomId: selectedRoom._id, // Critical: MongoDB ID
-        sender: user.userName,
+        sender: user.username,
         text: msgInput,
         time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
         id: Date.now().toString() // Temp ID for React Key
@@ -90,7 +90,7 @@ const ChatWindow = ({ socket }) => {
       {/* Messages Feed */}
       <div className="flex-1 overflow-y-auto p-4 space-y-6">
         {currentRoomMessages.map((msg, idx) => {
-            const isMe = msg.sender === user.userName;
+            const isMe = msg.sender === user.username;
             return (
                 <div key={idx} className={`flex ${isMe ? "justify-end" : "justify-start"} group`}>
                     {!isMe && (
